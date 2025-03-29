@@ -41,9 +41,6 @@ public class BillingServiceGrpcClient {
                 .setEmail(email)
                 .build();
 
-        log.info("Sending request to Billing Service via GRPC: {}",
-                request);
-
         BillingResponse response = blockingStub.createBillingAccount(request);
 
         log.info("Received response from Billing Service via GRPC: {}",
